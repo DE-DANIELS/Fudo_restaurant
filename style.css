@@ -999,7 +999,7 @@ footer ul li a:hover {
 /****** RESPONSIVENESS *******/
 @media screen and (max-width: 967px) {
   header .navbar,
-  header .btn {
+  header .hea_bnt {
     display: none;
   }
   .xlick {
