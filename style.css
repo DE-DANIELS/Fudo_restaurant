@@ -119,15 +119,39 @@ header .btn .signup:hover {
   transition-duration: 0.4s;
 }
 
-header #container .bi-menu-button-wide {
-  font-size: 30px;
-  color: #f54748;
+/* MOBILE */
+.N-mobile {
+  margin-top: 1rem;
+  display: none;
+  text-align: center;
 }
-
-header .menu-btn {
+.N-mobile ul {
+  display: block;
+  margin-bottom: 2rem;
+}
+.N-mobile ul li a {
+  display: block;
+  width: 95%;
+  margin: auto;
+  border: none;
+  padding: 1rem 0;
+}
+.N-mobile ul li a:hover {
+  background-color: #f4f1f1;
+}
+.N-mobile button {
+  margin-left: 0;
+}
+.xlick {
+  font-size: 2rem;
   display: none;
 }
-
+.xlick .fa-bars,
+.xlick .fa-xmark {
+  display: none;
+  color: #f54748;
+  cursor: pointer;
+}
 /* HERO SECTION */
 #hero {
   background-image: linear-gradient(to bottom, #fef2f2, #fff);
@@ -136,7 +160,6 @@ header .menu-btn {
 
 .write-up {
   max-width: 510px;
-  /* width: 540px; */
   padding-right: 110px;
 }
 
@@ -179,6 +202,7 @@ header .menu-btn {
 }
 
 #hero .form {
+  max-width: 400px;
   position: relative;
   display: flex;
   align-items: center;
@@ -187,7 +211,7 @@ header .menu-btn {
 }
 
 .form input {
-  width: 250px;
+  width: 100%;
   padding: 15px 10px;
   border-radius: 10px 0 0 10px;
   border: 2px solid var(--btn-color);
@@ -195,17 +219,21 @@ header .menu-btn {
 }
 
 .form button {
+  width: 30%;
   color: var(--btn-bgcolor);
   background-color: var(--btn-color);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: capitalize;
-  padding: 15px 20px;
-  border: none;
+  padding: 15px 2px;
+  border: 1px solid var(--btn-color);
   border-radius: 0 10px 10px 0;
   cursor: pointer;
   transition-duration: 0.4s;
 }
-
+.form button .bi-chevron-right {
+  font-size: 0.7rem;
+  margin-left: 3px;
+}
 .form button:hover {
   background-color: var(--btnhover-color);
 }
@@ -214,6 +242,9 @@ header .menu-btn {
   margin: 0 0 -1px 7px;
 }
 
+.form input::placeholder {
+  font-size: 0.8rem;
+}
 #hero .customers {
   width: 250px;
   display: flex;
@@ -341,9 +372,8 @@ header .menu-btn {
 
 #menu .pizza-image {
   position: relative;
-  width: 400px;
-  height: 400px;
-  max-width: 400px;
+  height: 380px;
+  max-width: 380px;
 }
 
 #menu .pizza-write-up h4 {
@@ -567,7 +597,6 @@ header .menu-btn {
   text-align: center;
   padding-bottom: 90px;
   padding-left: 4rem;
-  /* padding-right: 10rem; */
 }
 
 #testimonial h5 {
@@ -714,11 +743,10 @@ header .menu-btn {
 }
 
 #mobile .mobile-container {
-  margin: auto;
-  width: 1000px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 8rem;
 }
 
 .mobile-container .mobile-phone {
@@ -825,13 +853,13 @@ header .menu-btn {
 }
 
 .news-form {
-  background-color: red;
+  max-width: 400px;
   display: flex;
   align-items: center;
 }
 
 .news-form input {
-  width: 92%;
+  width: 100%;
   padding: 12px;
   border-radius: 7px 0 0 7px;
   border: none;
@@ -839,13 +867,14 @@ header .menu-btn {
 }
 
 .news-form button {
+  width: 40%;
+  padding: 12px 2px;
   font-size: 0.8rem;
   color: #fff;
   background-color: var(--btn-color);
   text-transform: capitalize;
   border-radius: 7px;
   border: none;
-  padding: 12px 15px;
   cursor: pointer;
   transition-duration: 0.4s;
   margin-left: -10px;
@@ -856,13 +885,14 @@ header .menu-btn {
 }
 
 .news-form .bi-chevron-right {
+  font-size: 0.9rem;
   color: var(--btn-color);
   background-color: var(--btn-bgcolor);
   margin-bottom: -1px;
   vertical-align: middle;
-  padding: 3px 4px;
+  padding: 2px;
   border-radius: 7px;
-  margin-left: 7px;
+  margin-left: 3px;
 }
 
 /* FOOTER SECTION */
@@ -972,7 +1002,12 @@ footer ul li a:hover {
   header .btn {
     display: none;
   }
-
+  .xlick {
+    display: block;
+  }
+  .xlick .fa-bars {
+    display: block;
+  }
   header .menu-btn {
     display: block;
     cursor: pointer;
@@ -1044,14 +1079,13 @@ footer ul li a:hover {
     top: 78%;
     right: 20%;
   }
-
   #menu .pizza-write-up h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
   }
 
   #menu .pizza-write-up p {
-    max-width: 350px;
+    max-width: 300px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -1061,7 +1095,7 @@ footer ul li a:hover {
     width: fit-content;
     margin: auto;
   }
-
+  /* FOODS */
   #foods {
     padding-left: 20px;
     padding-right: 20px;
@@ -1088,12 +1122,12 @@ footer ul li a:hover {
 
   #foods .foods-write-up,
   #blog .blog-write-up {
-    max-width: 400px;
+    max-width: 300px;
   }
 
   #foods .foods-write-up h1,
   #blog .blog-write-up h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 
   #foods .foods-write-up p,
@@ -1102,12 +1136,15 @@ footer ul li a:hover {
   }
 
   /******* TESTIMONIALS ******/
+  #testimonial {
+    padding-left: 0;
+  }
   #testimonial h1 {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
   }
 
   #testimonial p {
-    max-width: 350px;
+    max-width: 300px;
     padding: 0 10px;
   }
 
@@ -1178,9 +1215,8 @@ footer ul li a:hover {
   }
 
   #mobile .mobile-container {
-    margin: auto;
-    max-width: 530px;
-    display: block;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .mobile-container .mobile-phone {
@@ -1190,7 +1226,7 @@ footer ul li a:hover {
   }
 
   .mobile-container .mobile-writeup {
-    max-width: 400px;
+    max-width: 300px;
     margin: auto;
     text-align: center;
     position: relative;
@@ -1198,7 +1234,7 @@ footer ul li a:hover {
   }
 
   .mobile-container .mobile-writeup h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
   }
 
@@ -1218,11 +1254,11 @@ footer ul li a:hover {
 
   /***** NEWSLETTER *****/
   .news-container {
-    display: block;
+    flex-direction: column;
   }
 
   .news-writeup {
-    max-width: 400px;
+    max-width: 300px;
     margin: auto;
     text-align: center;
   }
@@ -1252,7 +1288,10 @@ footer ul li a:hover {
   footer h4 {
     margin-bottom: 10px;
   }
-  footer .last p {
-    font-size: 0.8rem;
+  footer #last p {
+    font-size: 0.75rem;
+  }
+  footer #last ul li a {
+    font-size: 0.75rem;
   }
 }
